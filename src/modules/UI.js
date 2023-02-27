@@ -26,9 +26,9 @@ const displayList = () => {
 
 const addList = (description, completed, index) => {
   const listAdded = new ListTemplate(description, completed, index);
-  const x = localGet();
-  x.push(listAdded);
-  localStorage.setItem('listStorage', JSON.stringify(x));
+  const list = localGet();
+  list.push(listAdded);
+  localStorage.setItem('listStorage', JSON.stringify(list));
   todoTask.value = '';
 
   displayList();
